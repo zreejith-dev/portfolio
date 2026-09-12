@@ -1,354 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sreejith R | Android Developer & AI Builder</title>
-  <meta name="description" content="Sreejith R — Android Developer, AI Builder & Startup Founder. I build AI-powered Android apps and products, entirely from a smartphone." />
-  <meta property="og:title" content="Sreejith R | Android Developer & AI Builder" />
-  <meta property="og:description" content="I build AI-powered Android apps and products — entirely from a smartphone." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/sreejith.jpg" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sreejith R — AI Builder · Android Developer · Founder, Vynrix. Building production AI systems from Kerala.">
+<title>Sreejith R — AI Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="with-photo">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== Header / Nav ===== -->
-  <header class="site-header" data-header>
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Sreejith R — home">
-        <span class="brand-dot"></span>
-        Sreejith R.
-      </a>
+<!-- NAV -->
+<nav class="site-nav-bar" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a class="logo" href="#top" aria-label="Sreejith R — home">
+      SREEJITH<span class="logo-dot">•</span>R
+      <span class="status-dot" aria-hidden="true"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="primary-nav" class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">What I Do</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="resume.html" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="biodata.html" target="_blank" rel="noopener">Bio Data</a></li>
+    </ul>
+  </div>
+</nav>
 
-      <nav class="site-nav" aria-label="Primary" data-nav>
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-resume" href="resume.html" target="_blank" rel="noopener">Resume</a>
-        <a class="nav-resume" href="biodata.html" target="_blank" rel="noopener">Bio Data</a>
-      </nav>
-
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" data-nav-toggle>
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- ===== Hero ===== -->
-    <section class="hero" id="top" data-section="hero">
-      <div class="hero-gradient-bg" aria-hidden="true"></div>
-      <div class="hero-3d" id="hero-3d" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-photo reveal" data-hero-photo>
-          <div class="photo-frame">
-            <img src="assets/sreejith.jpg" alt="Sreejith R — Android Developer and AI Builder" width="1024" height="1024" loading="eager" />
-          </div>
-          <div class="photo-badge">
-            <span class="badge-pulse"></span>
-            Available for new projects
-          </div>
-        </div>
-
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Designer · Developer · AI Builder</p>
-          <h1 class="hero-title">
-            Build <span class="outline">Boldly</span><br />
-            <span class="grad">Ship</span> Smart.
-          </h1>
-          <p class="hero-sub">
-            I build AI-powered Android apps and products — entirely from a smartphone.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Build with me</a>
-            <a class="btn btn-ghost" href="#work">See my work</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-stats container reveal">
-        <div class="stat">
-          <strong>4+</strong>
-          <span>Products Built</span>
-        </div>
-        <div class="stat">
-          <strong>100%</strong>
-          <span>Built From Smartphone</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Tech Ticker ===== -->
-    <div class="ticker" aria-label="Technologies I work with" data-ticker>
-      <div class="ticker-track">
-        <span>KOTLIN</span><span>JAVA</span><span>FASTAPI</span><span>COMPOSE</span><span>FLUTTER</span><span>PYTHON</span><span>TERMUX</span>
-        <span>KOTLIN</span><span>JAVA</span><span>FASTAPI</span><span>COMPOSE</span><span>FLUTTER</span><span>PYTHON</span><span>TERMUX</span>
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <p class="eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        Kerala, India · Building in Public
+      </p>
+      <h1 id="hero-title" class="hero-headline">
+        <span class="line">I BUILD</span>
+        <span class="line">AI <span class="accent">PRODUCTS</span></span>
+        <span class="line">THAT SHIP FAST</span>
+      </h1>
+      <p class="hero-sub">
+        Solo founder of Vynrix. I design, code, and ship AI-powered apps and automation tools for Kerala businesses — one commit at a time.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#work">See the work →</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </div>
+    <div class="hero-photo">
+      <div class="photo-blob" aria-hidden="true"></div>
+      <img src="assets/sreejith-new.jpg" alt="Sreejith R — AI Builder and Founder" loading="eager">
+      <span class="side-meta" aria-hidden="true">AI · AUTOMATION · STRATEGY</span>
+    </div>
+  </section>
 
-    <!-- ===== Work / Projects ===== -->
-    <section class="section" id="work" data-section="work">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">Selected Work</p>
-          <h2 class="section-title">Latest <span class="outline">Projects</span></h2>
+  <!-- STATS BAR -->
+  <section class="stats-bar" aria-label="Key metrics">
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Products in Build</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">14</div>
+        <div class="stat-label">Kerala Districts</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Founder, Solo</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Self-Taught & Built</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section id="work" class="section">
+    <div class="section-label">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Featured Work</span>
+    </div>
+    <div class="work-grid">
+      <article class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#e8342a,#7a120c);">DOIT<br>NOW</div>
+        <div class="work-body">
+          <div class="work-meta">01 · ANDROID · COLLEGE PROJECT · 2025</div>
+          <h3 class="work-title">DoitNow</h3>
+          <p class="work-desc">Kotlin to-do app with Firebase sync, offline Room storage, and AI task suggestions.</p>
+          <div class="work-tags">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Room DB</span>
+          </div>
+          <a class="work-link" href="https://github.com/zreejith-dev/DoitNow" target="_blank" rel="noopener">Project →</a>
         </div>
+      </article>
 
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-tag">AI Voice OS</span>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
-            <h3 class="project-name">VYNRIX</h3>
-            <p class="project-desc">AI Voice OS &amp; Assistant — a voice-first operating experience built on-device.</p>
-            <a class="project-link" href="#contact" aria-label="Work with Sreejith on a project like VYNRIX">View Project</a>
-          </article>
+      <article class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#1a1a1a,#000);">NADODI</div>
+        <div class="work-body">
+          <div class="work-meta">02 · TRAVEL AI · 2025</div>
+          <h3 class="work-title">Nadodi</h3>
+          <p class="work-desc">Kerala travel discovery — 1,450+ places across 14 districts with Claude-powered concierge, packaged for Android.</p>
+          <div class="work-tags">
+            <span class="tag">React</span>
+            <span class="tag">Capacitor</span>
+            <span class="tag">Claude API</span>
+          </div>
+          <a class="work-link" href="https://github.com/zreejith-dev/Nadodi" target="_blank" rel="noopener">Project →</a>
+        </div>
+      </article>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-tag">Android App</span>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
-            <h3 class="project-name">NADODI</h3>
-            <p class="project-desc">A native Android app built with clean architecture and a smooth, reliable UX.</p>
-            <a class="project-link" href="#contact" aria-label="Work with Sreejith on a project like NADODI">View Project</a>
-          </article>
+      <article class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#0e2f1c,#000);">MONEY<br>MOMENT</div>
+        <div class="work-body">
+          <div class="work-meta">03 · FINANCE AI · IN PROGRESS · 2026</div>
+          <h3 class="work-title">MoneyMoment AI</h3>
+          <p class="work-desc">Regret-aware spending app — AI returns green/yellow/red verdict before you buy, with reason and goal impact.</p>
+          <div class="work-tags">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">Room DB</span>
+          </div>
+          <a class="work-link" href="https://github.com/Zreejithhhhhh/fin-ai" target="_blank" rel="noopener">Project →</a>
+        </div>
+      </article>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-tag">Productivity</span>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
-            <h3 class="project-name">DOITNOW</h3>
-            <p class="project-desc">Task &amp; productivity app with reminders and automation that actually saves time.</p>
-            <a class="project-link" href="#contact" aria-label="Work with Sreejith on a project like DOITNOW">View Project</a>
-          </article>
+      <article class="work-card">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#3a0d0a,#000);">STUD<br>DUO</div>
+        <div class="work-body">
+          <div class="work-meta">04 · PRODUCTIVITY · IN PROGRESS · 2026</div>
+          <h3 class="work-title">StudDuo</h3>
+          <p class="work-desc">Collaborative study app with shared timers, progress tracking, and focus modes — built entirely on phone.</p>
+          <div class="work-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Realtime</span>
+          </div>
+          <a class="work-link" href="https://github.com/zreejith-dev/StudDuo" target="_blank" rel="noopener">Project →</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-          <article class="project-card reveal">
-            <div class="project-top">
-              <span class="project-tag">AI Finance</span>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
-            <h3 class="project-name">MONEYMOMENT AI</h3>
-            <p class="project-desc">AI-powered finance app that simplifies money decisions with clear thinking.</p>
-            <a class="project-link" href="#contact" aria-label="Work with Sreejith on a project like MONEYMOMENT AI">View Project</a>
-          </article>
+  <!-- WHAT I DO / SERVICES -->
+  <section id="services" class="section">
+    <div class="section-label">
+      <span class="dot" aria-hidden="true"></span>
+      <span>What I Do</span>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">01</div>
+        <h3 class="service-title">AI Automation</h3>
+        <p class="service-desc">Agentic workflows and bots that handle real business tasks — lead gen, bookings, reminders.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">02</div>
+        <h3 class="service-title">Full-Stack Builds</h3>
+        <p class="service-desc">End-to-end apps — frontend, backend, database — designed, coded, and shipped solo.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">03</div>
+        <h3 class="service-title">Product Strategy</h3>
+        <p class="service-desc">Turning rough ideas into scoped MVPs — PRDs, phased roadmaps, honest build sequencing.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">04</div>
+        <h3 class="service-title">Startup Building</h3>
+        <p class="service-desc">Founding and running Vynrix end-to-end — branding, pitch framing, go-to-market for Kerala SMBs.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-label">
+      <span class="dot" aria-hidden="true"></span>
+      <span>About Me</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-quote">
+        FROM DIPLOMA<br>TO <span class="accent">FOUNDER.</span>
+      </div>
+      <div class="about-body">
+        <p>I'm Sreejith R, a Computer Engineering diploma graduate from Palakkad, Kerala. I don't have a conventional job title yet — everything on this page is stuff I built anyway, before anyone paid me to.</p>
+        <p><strong>Vynrix</strong> is my flagship: AI automation, web builds, and bots for Kerala SMBs. Alongside it I ship standalone apps to sharpen the stack — Android, React, FastAPI, and AI. No inflated skills, just live repos and running code.</p>
+        <div class="about-stack">
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">Android Kotlin</span>
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">LLM Runtimes</span>
+          <span class="stack-tag accent-tag">Kerala SMB Systems</span>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ===== Services ===== -->
-    <section class="section section-alt" id="services" data-section="services">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">What I Do</p>
-          <h2 class="section-title">What I help you<br />to <span class="grad">Build…</span></h2>
-        </div>
+    <!-- PHILOSOPHY -->
+    <div class="philosophy">
+      <h2 class="philosophy-title">SHIP IT SMALL.<br>MAKE IT <span class="accent">REAL.</span></h2>
+      <p class="philosophy-text">I'm early — a diploma graduate building startups before having an official job title. I'd rather ship a working v1 with three honest features than pitch a vision I haven't built.</p>
+      <ul class="principles">
+        <li>
+          <span class="principle-num">01</span>
+          <div>
+            <strong>Velocity beats perfectionism</strong>
+            <span>Working software in production surfaces truth faster than roadmap speculation.</span>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">02</span>
+          <div>
+            <strong>Solve local SMB problems first</strong>
+            <span>Practical bots, invoice tools, workflow automation for Kerala merchants. Ground-truth revenue.</span>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">03</span>
+          <div>
+            <strong>Code in public with verified commits</strong>
+            <span>Inspectable repositories, documented PRs, verifiable deployment logs replace claims.</span>
+          </div>
+        </li>
+        <li>
+          <span class="principle-num">04</span>
+          <div>
+            <strong>Full-stack ownership from PRD to deploy</strong>
+            <span>No handoff friction. Wireframing, DB migrations, CI/CD, client onboarding handled end-to-end.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-        <div class="services-list">
-          <article class="service-row reveal">
-            <div class="service-num">01</div>
-            <div class="service-body">
-              <h3>Android Development</h3>
-              <p>Building fast, clean Android apps with modern architecture. Every feature is based on purpose, not guesswork.</p>
-              <ul class="chip-list">
-                <li>Kotlin</li><li>Java</li><li>Jetpack Compose</li><li>Material 3</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-row reveal">
-            <div class="service-num">02</div>
-            <div class="service-body">
-              <h3>AI Product Building</h3>
-              <p>Shipping AI products — assistants, automation, and smart tools — that solve real problems and stay reliable.</p>
-              <ul class="chip-list">
-                <li>LLM Integration</li><li>Voice Interfaces</li><li>RAG Pipelines</li><li>Claude-3 API</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-row reveal">
-            <div class="service-num">03</div>
-            <div class="service-body">
-              <h3>App UI / UX</h3>
-              <p>Designing interfaces that are simple, intuitive, and built around real user behavior.</p>
-              <ul class="chip-list">
-                <li>Dark Themes</li><li>Motion Design</li><li>Micro-interactions</li><li>Figma</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-row reveal">
-            <div class="service-num">04</div>
-            <div class="service-body">
-              <h3>Product Building</h3>
-              <p>Taking products from idea to launch — 4+ products built end-to-end from a single smartphone.</p>
-              <ul class="chip-list">
-                <li>Product Ideation</li><li>MVP Planning</li><li>Market Fit</li><li>Launch Strategy</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="service-row reveal">
-            <div class="service-num">05</div>
-            <div class="service-body">
-              <h3>Cloud &amp; Backend</h3>
-              <p>Backend services and cloud infrastructure that keep products fast, secure, and always-on.</p>
-              <ul class="chip-list">
-                <li>FastAPI</li><li>Firebase</li><li>REST APIs</li><li>Deployment</li>
-              </ul>
-            </div>
-          </article>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="contact-grid">
+      <div class="contact-main">
+        <h2 class="contact-headline">LET'S <span class="accent">BUILD</span><br>SOMETHING.</h2>
+        <p class="contact-sub">Open to fresher software roles and freelance builds. If it needs an AI feature shipped fast, I'm probably already prototyping it.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="tel:+919544190119">
+            <span class="material-symbols-outlined" aria-hidden="true">call</span>
+            Call me
+          </a>
+          <a class="btn btn-ghost" href="mailto:sreejithsparkie@gmail.com">
+            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+            Email me
+          </a>
         </div>
       </div>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section class="section" id="about" data-section="about">
-      <div class="container about-grid">
-        <div class="about-photo reveal" data-about-photo>
-          <div class="photo-frame photo-frame-transparent photo-frame-lg">
-            <img src="assets/sreejith-hero.png" alt="Sreejith R working on Android development" width="457" height="546" loading="lazy" />
-          </div>
+      <div class="contact-card">
+        <div class="contact-row">
+          <a href="tel:+919544190119">
+            <span class="material-symbols-outlined" aria-hidden="true">phone_in_talk</span>
+            +91 95441 90119
+          </a>
         </div>
-
-        <div class="about-body">
-          <p class="eyebrow reveal">About Me</p>
-          <h2 class="section-title reveal">Designing experiences<br />that <span class="outline">make sense.</span></h2>
-          <p class="about-role reveal">Sreejith R. — Designer · Developer · AI Builder · Product Builder</p>
-          <p class="reveal">
-            I started my journey building Android apps in my free time. Over the past few years I've grown from writing simple apps to designing AI-powered products — learning everything hands-on, entirely from a smartphone.
-          </p>
-          <p class="reveal">
-            My focus quickly shifted from just writing code to building products that people actually use. That's when I began to see myself as a product builder, not just a developer.
-          </p>
-          <p class="reveal">
-            Now I'm building AI products that understand voice, automate work, and feel genuinely smart. It's helping me think beyond screens and focus on how people interact with technology.
-          </p>
-          <p class="reveal">
-            My goal is to keep growing by combining Android engineering with AI — building products that feel clear, useful, and genuinely meaningful.
-          </p>
-
-          <div class="history reveal">
-            <h3>Work History</h3>
-            <div class="history-item">
-              <div>
-                <h4>Model Residential Polytechnic</h4>
-                <p>Diploma in Computer Engineering</p>
-              </div>
-              <span class="history-date">2021 — 2026</span>
-            </div>
-            <div class="history-item">
-              <div>
-                <h4>Startups &amp; Apps</h4>
-                <p>Founder &amp; Developer</p>
-              </div>
-              <span class="history-date">Ongoing</span>
-            </div>
-          </div>
+        <div class="contact-row">
+          <a href="mailto:sreejithsparkie@gmail.com">
+            <span class="material-symbols-outlined" aria-hidden="true">outgoing_mail</span>
+            sreejithsparkie@gmail.com
+          </a>
+        </div>
+        <div class="contact-row">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          Palakkad, Kerala, India (IST UTC+5:30)
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/zreejith-dev" target="_blank" rel="noopener" aria-label="GitHub">
+            <span class="material-symbols-outlined" aria-hidden="true">code</span>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/sreejith-r-57b355333" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <span class="material-symbols-outlined" aria-hidden="true">business</span>
+            LinkedIn
+          </a>
+          <a href="https://github.com/zreejith-dev?tab=repositories" target="_blank" rel="noopener" aria-label="Projects">
+            <span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
+            Repositories
+          </a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ===== FAQ ===== -->
-    <section class="section" id="faq" data-section="faq">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">FAQs</p>
-          <h2 class="section-title">Questions,<br /><span class="grad">answered.</span></h2>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item reveal" open>
-            <summary>How do we get started?</summary>
-            <p>We start with a quick chat where you share your idea, goals, and what you need. From there, I propose the right app architecture and next steps.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>What if I'm not sure what I need yet?</summary>
-            <p>That's completely fine. I help you figure it out. We break things down together and define what will actually work for your product.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Will I be involved in the development process?</summary>
-            <p>Yes. You'll be part of key stages like scope, design, feedback, and testing. The process stays collaborative, not one-sided.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>How many revisions can I request?</summary>
-            <p>I include a reasonable number of revisions to make sure the final result feels right. The focus is on getting it correct, not rushing it. If there's a need for longer support, we can discuss a retainer.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Do you only build, or also help with ideas?</summary>
-            <p>I do both. I help shape the idea, not just build it. The goal is to make something that works, not just something that looks good.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>How long does a typical project take to complete?</summary>
-            <p>Timelines depend on the scope. A focused app or AI tool usually takes 2–4 weeks, while larger products can take 2–3 months. I share a clear timeline after understanding your requirements.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Can you handle both Android and backend work?</summary>
-            <p>Yes. From Android apps and UI to AI backends and cloud services, I make sure everything works together end to end.</p>
-          </details>
-        </div>
-
-        <div class="faq-cta reveal">
-          <p>Still not sure? <strong>Book a free discovery call.</strong></p>
-          <a class="btn btn-primary" href="#contact">Let's talk</a>
-        </div>
+    <!-- TERMINAL SIMULATOR -->
+    <div class="terminal-sim">
+      <div class="terminal-header">
+        <span class="terminal-dot" aria-hidden="true"></span>
+        <span>DEV_CONSOLE // SHIPPED_BUILDS_SHELL</span>
+        <span>BASH v5.2</span>
       </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section class="section contact" id="contact" data-section="contact">
-      <div class="container">
-        <div class="contact-banner reveal">
-          <p class="eyebrow">Contact</p>
-          <h2 class="section-title">Let's design, build &amp; create<br /><span class="grad">incredible products</span> together.</h2>
-          <p class="contact-sub">It should make your product clear, fast, and easy to trust. If that's what you're aiming for — we should talk.</p>
-
-          <div class="contact-actions">
-            <a class="btn btn-primary btn-lg" href="mailto:sreejithsparkie@gmail.com">Email me</a>
-            <a class="btn btn-ghost btn-lg" href="tel:+919544190119">Call now</a>
-          </div>
-
-          <div class="contact-links">
-            <a href="mailto:sreejithsparkie@gmail.com">sreejithsparkie@gmail.com</a>
-            <a href="tel:+919544190119">+91 95441 90119</a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/Sreejith-codie" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
-            <a href="https://linkedin.com/in/sreejith-r-57b355333" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
-            <a href="resume.html" target="_blank" rel="noopener" aria-label="View Resume">Resume</a>
-            <a href="biodata.html" target="_blank" rel="noopener" aria-label="View Bio Data">Bio Data</a>
-          </div>
-        </div>
+      <div class="terminal-body">
+        <div class="terminal-line"><span class="prompt">$</span> vynrix --status</div>
+        <div class="terminal-line output">> Engine: Neural Pipeline orchestrator active.</div>
+        <div class="terminal-line output">> Work Mode: Available for Immediate Deployment.</div>
+        <div class="terminal-line"><span class="prompt">$</span> ping contact@sreejith-r.network</div>
+        <div class="terminal-line output success">> 64 bytes from uplink: icmp_seq=1 ttl=58 time=0.812 ms [READY]</div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <blockquote class="quote">
+      I don't wait to be ready — I <span class="quote-highlight">SHIP, LEARN, AND REBUILD</span> until it's real.
+    </blockquote>
+    <div class="quote-attr">— Sreejith R, Founder, Vynrix</div>
+  </section>
+</main>
+
+<!-- FOOTER -->
 <footer class="site-footer">
-    <div class="container footer-inner">
-      <a class="brand" href="#top">Sreejith R.</a>
-      <p class="footer-note">Designed & built by Sreejith R · © <span data-year></span></p>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="resume.html" target="_blank" rel="noopener">Resume</a>
-        <a href="biodata.html" target="_blank" rel="noopener">Bio Data</a>
-      </nav>
-    </div>
-  </footer>
+  <div class="footer-inner">
+    <span>© 2026 SREEJITH R</span>
+    <nav class="footer-nav">
+      <a href="#work">Work</a>
+      <a href="#services">What I Do</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.html" target="_blank" rel="noopener">Resume</a>
+      <a href="biodata.html" target="_blank" rel="noopener">Bio Data</a>
+    </nav>
+  </div>
+</footer>
 
-  <script src="assets/three.min.js" defer></script>
-  <script src="js/hero-3d.js" defer></script>
-  <script src="js/main.js" defer></script>
+<a href="#top" class="back-to-top" aria-label="Back to top">
+  <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<script src="js/main.js" defer></script>
 </body>
 </html>

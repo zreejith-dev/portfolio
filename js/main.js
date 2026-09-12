@@ -1,100 +1,100 @@
-/* ==========================================================================
-   Sreejith R — Portfolio
-   Interactions: nav, scroll reveal, counters, footer year
-   ========================================================================== */
-
-(function () {
+/**
+ * Sreejith R — Portfolio
+ * Main JavaScript: Scroll animations, nav, back-to-top, scroll progress
+ */
+(function() {
   "use strict";
 
-  /* ---------- Mobile nav toggle ---------- */
-  const toggle = document.querySelector("[data-nav-toggle]");
-  const nav = document.querySelector("[data-nav]");
-
-  function closeNav() {
-    if (!nav || !toggle) return;
-    nav.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
-  }
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-    // Close nav when a link is clicked
-    nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeNav));
-    // Close on Escape
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeNav();
-    });
-  }
-
-  /* ---------- Header shadow on scroll ---------- */
-  const header = document.querySelector("[data-header]");
-  if (header) {
-    const onScroll = () => {
-      header.style.borderBottomColor =
-        window.scrollY > 8 ? "var(--border-strong)" : "var(--border)";
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
-
-  /* ---------- Scroll reveal ---------- */
-  const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealEls.length) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
-  }
-
-  /* ---------- Animated counters ---------- */
-  const counters = document.querySelectorAll("[data-count]");
-  if (counters.length) {
-    const animate = (el) => {
-      const target = parseInt(el.dataset.count || "0", 10);
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        el.textContent = String(target);
-        return;
+  // --- Intersection Observer for scroll reveal ---
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
       }
-      const duration = 1400;
-      const start = performance.now();
-      const tick = (now) => {
-        const p = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = String(Math.round(target * eased));
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    };
-    const cio = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animate(entry.target);
-            cio.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-    counters.forEach((el) => cio.observe(el));
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+  // --- Nav toggle ---
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   }
 
-  /* ---------- Footer year ---------- */
-  const yearEl = document.querySelector("[data-year]");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  // --- Scroll progress & Back to top ---
+  const scrollProgress = document.getElementById('scrollProgress');
+  const backToTop = document.querySelector('.back-to-top');
 
-  /* ---------- Smooth anchor scroll with fixed header offset (native handles via scroll-padding) ---------- */
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+    if (scrollProgress) scrollProgress.style.width = scrolled + '%';
+    if (backToTop) backToTop.classList.toggle('show', h.scrollTop > 600);
+  }, { passive: true });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // --- Stagger animation for work cards ---
+  const workGrid = document.querySelector('.work-grid');
+  if (workGrid) {
+    workGrid.classList.add('reveal-stagger');
+    workGrid.querySelectorAll('.work-card').forEach(card => card.classList.add('stagger-child'));
+    io.observe(workGrid);
+  }
+
+  // --- Stagger for services ---
+  const servicesGrid = document.querySelector('.services-grid');
+  if (servicesGrid) {
+    servicesGrid.classList.add('reveal-stagger');
+    servicesGrid.querySelectorAll('.service-card').forEach(card => card.classList.add('stagger-child'));
+    io.observe(servicesGrid);
+  }
+
+  // --- Stats stagger ---
+  const statsGrid = document.querySelector('.stats-grid');
+  if (statsGrid) {
+    statsGrid.classList.add('reveal-stagger');
+    statsGrid.querySelectorAll('.stat-block').forEach(block => block.classList.add('stagger-child'));
+    io.observe(statsGrid);
+  }
+
+  // --- Principles stagger ---
+  const principles = document.querySelector('.principles');
+  if (principles) {
+    principles.classList.add('reveal-stagger');
+    principles.querySelectorAll('li').forEach(li => li.classList.add('stagger-child'));
+    io.observe(principles);
+  }
+
+  // --- Hero staggered load ---
+  const heroElements = document.querySelectorAll('.hero-content > *, .hero-photo');
+  heroElements.forEach((el, i) => {
+    el.classList.add('hero-load');
+    if (i === 0) el.classList.add('d1');
+    else if (i === 1) el.classList.add('d2');
+    else if (i === 2) el.classList.add('d3');
+    else if (i === 3) el.classList.add('d4');
+    else if (i === 4) el.classList.add('d5');
+    else el.classList.add('d5');
+  });
+
 })();
